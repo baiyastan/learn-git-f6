@@ -6,6 +6,7 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
   const [title, setTitle] = useState("")
+  const [timer, setTimer] = useState(0)
 
   return (
     <>
@@ -19,6 +20,10 @@ function App() {
       </div>
       <h1>Vite + React -- {title}</h1>
       <input type="text" onChange={(e) => setTitle(e.target.value)} />
+      <h3>{timer}</h3>
+      <button onClick={() => setTimer((timer) => timer + 1)}>
+          timer is {timer}
+        </button>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
