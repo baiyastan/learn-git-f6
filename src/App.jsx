@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [title, setTitle] = useState("")
 
   return (
     <>
@@ -16,7 +17,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Vite + React -- {title}</h1>
+      <input type="text" onChange={(e) => setTitle(e.target.value)} />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
